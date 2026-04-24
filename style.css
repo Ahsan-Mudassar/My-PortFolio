@@ -533,6 +533,7 @@ footer>div h1 span {
     .projects-section h1+div {
         display: flex;
         flex-direction: column;
+        padding: 30px 20px;
     }
 
     .projects-section .project-intro .project-img {
@@ -562,5 +563,47 @@ footer>div h1 span {
 
     .contact-section .vertical-bar {
         display: none;
+    }
+}
+
+@media (max-width:370px) {
+   nav ul {
+        display: none;
+        padding: 30px;
+        height: 62vh;
+        width: 60%;
+        position: absolute;
+        right: 0;
+        background-color: #211a83;
+    }
+    nav h1{
+        margin-left: -40px;
+        margin-right: 159px;
+    }
+    .skills-section .skills-info .skils-input {
+        padding: 0 5px;
+        margin: 40px 0;
+    }
+
+    .projects-section .project-intro {
+        height: 78vh;
+        width: 48vh;
+    }
+
+    .contact-section h1+div {
+        height: 100vh;
+        padding: 0 40px;
+        margin-top: 50px;
+    }
+
+    .contact-section .contact-form {
+        margin-top: 20px;
+    }
+
+    .contact-section .social-icons {
+        margin: -2px;
+    }
+    .contact-section {
+        min-height: 160vh;
     }
 }
