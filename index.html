@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <header >
+    <header>
         <nav>
             <div class="logo">
                 <h1>Port<span>folio</span></h1>
@@ -48,8 +48,9 @@
                 </div>
             </div>
             <div class="photo-section ">
-                <img src="https://res.cloudinary.com/dzssuss65/image/upload/f_auto,q_auto/my-photo-removebg-preview-removebg-preview_ppiigh" alt="my-photo">
-            </div>
+                <img src="https://res.cloudinary.com/dzssuss65/image/upload/f_auto,q_auto/my-photo-removebg-preview-removebg-preview_ppiigh"
+                    alt="my-photo">
+            </div>z
         </div>
     </section>
     <section id="about" class="about-section">
@@ -120,7 +121,7 @@
     <section id="projects" class="projects-section">
         <h1>Projects</h1>
         <div>
-            <div class="project-intro" >
+            <div class="project-intro">
                 <div class="project-img">
                     <a href="https://txtutills.netlify.app" target="_blank"><img src="images/projects1.png"
                             alt="txtutills-app"></a>
@@ -253,21 +254,25 @@
         </div>
     </Footer>
 
-    <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
     <script>
-       // AOS.init()
 
         let menubtn = document.querySelector(".menu-btn");
-        let ul = document.getElementById("list-items")
+        let ul = document.getElementById("list-items");
+        let lisItems = document.querySelectorAll("#list-items li");
 
-        
+
         menubtn.addEventListener('click', () => {
-            if (ul.style.display === "none" ) {
-                ul.style.display = "block"
-            } else {
+            if (ul.style.display === "none") {
                 ul.style.display = "block";
+            } else {
+                ul.style.display = "none";
             }
         })
+        lisItems.forEach((li) => {
+            li.addEventListener('click', () => {
+                ul.style.display = "none";
+            });
+        });
 
     </script>
 </body>
