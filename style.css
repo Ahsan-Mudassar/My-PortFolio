@@ -479,7 +479,7 @@ footer>div h1 span {
         margin: 40px 0;
     }
 
-    nav .list-items .active {
+    nav ul .active {
         display: block;
     }
 
