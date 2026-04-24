@@ -7,9 +7,9 @@
     scroll-behavior: smooth;
 }
 
-body {
+/* body {
     overflow-x: hidden;
-}
+} */
 
 header {
     background-color: rgb(26, 26, 122);
