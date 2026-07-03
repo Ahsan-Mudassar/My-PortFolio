@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inder&family=Poppins:wght@400;700&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 header {
@@ -58,10 +61,6 @@ nav ul li a {
     transition: all .4s ease;
 }
 
-nav ul li :hover {
-    color: blueviolet;
-    font-weight: 500;
-}
 
 nav ul li ::after {
     content: '';
@@ -567,7 +566,7 @@ footer>div h1 span {
 }
 
 @media (max-width:370px) {
-   nav ul {
+    nav ul {
         display: none;
         padding: 30px;
         height: 62vh;
@@ -576,10 +575,12 @@ footer>div h1 span {
         right: 0;
         background-color: #211a83;
     }
-    nav h1{
+
+    nav h1 {
         margin-left: -40px;
         margin-right: 159px;
     }
+
     .skills-section .skills-info .skils-input {
         padding: 0 5px;
         margin: 40px 0;
@@ -603,6 +604,7 @@ footer>div h1 span {
     .contact-section .social-icons {
         margin: -2px;
     }
+
     .contact-section {
         min-height: 160vh;
     }
