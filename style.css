@@ -13,7 +13,7 @@
     --accent-2: #5eead4;
     --radius-lg: 18px;
     --radius-sm: 8px;
-    --max: 1180px;
+    --max: 1308px;
 }
 
 html {
@@ -34,7 +34,9 @@ body {
     box-sizing: border-box;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: "Space Grotesk", sans-serif;
     line-height: 1.15;
 }
@@ -248,6 +250,12 @@ nav ul li a:hover {
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.photo-section .code-frame:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 30px 60px -20px var(--accent-2);
 }
 
 .photo-section .frame-bar {
@@ -308,24 +316,37 @@ nav ul li a:hover {
 }
 
 @keyframes bob {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
 }
 
 @keyframes rise-in {
-    from { opacity: 0; transform: translateY(16px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     .hero-section .intro-section,
     .photo-section,
     .photo-section .tag-chip {
         animation: none;
     }
 }
-
-/* ---------- About ---------- */
 
 .about-section {
     background-color: var(--bg-alt);
@@ -349,7 +370,7 @@ nav ul li a:hover {
     margin-top: 24px;
 }
 
-.about-section .about-me p + p {
+.about-section .about-me p+p {
     margin-top: 16px;
 }
 
@@ -380,8 +401,6 @@ nav ul li a:hover {
     border-color: var(--accent-2);
     transform: translateY(-2px);
 }
-
-/* ---------- Skills ---------- */
 
 .skills-section {
     background-color: var(--bg);
@@ -434,8 +453,6 @@ nav ul li a:hover {
     border-color: rgba(94, 234, 212, 0.25);
 }
 
-/* ---------- Projects ---------- */
-
 .projects-section {
     background-color: var(--bg-alt);
     width: 100%;
@@ -446,10 +463,10 @@ nav ul li a:hover {
 
 .projects-section .projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 2fr));
     max-width: var(--max);
     margin: 0 auto;
-    gap: 24px;
+    gap: 16px;
     padding: 50px 0 0;
 }
 
@@ -526,8 +543,6 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* ---------- Contact ---------- */
-
 .contact-section {
     background-color: var(--bg);
     height: auto;
@@ -550,7 +565,7 @@ nav ul li a:hover {
     gap: 6px;
 }
 
-.contact-section .social-icons > div {
+.contact-section .social-icons>div {
     padding: 14px;
     display: flex;
     gap: 16px;
@@ -559,7 +574,7 @@ nav ul li a:hover {
     transition: background-color 0.2s ease;
 }
 
-.contact-section .social-icons > div:hover {
+.contact-section .social-icons>div:hover {
     background-color: var(--surface);
 }
 
@@ -573,7 +588,8 @@ nav ul li a:hover {
     margin-bottom: 2px;
 }
 
-.contact-section .social-icons p, .contact-section .social-icons p a {
+.contact-section .social-icons p,
+.contact-section .social-icons p a {
     color: var(--text-muted);
     text-decoration: none;
     font-size: 0.95rem;
@@ -643,8 +659,6 @@ nav ul li a:hover {
     transform: translateY(-2px);
 }
 
-/* ---------- Footer ---------- */
-
 footer {
     background-color: var(--bg-alt);
     padding: 40px 20px;
@@ -696,8 +710,6 @@ footer .copyright {
     opacity: 0.8;
 }
 
-/* ---------- Responsive ---------- */
-
 @media (max-width: 1100px) {
     .skills-section .skills-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -710,7 +722,7 @@ footer .copyright {
 
 @media (max-width: 900px) {
     .home-section .hero-section {
-        flex-direction: column-reverse;
+        flex-direction: column;
         text-align: left;
         gap: 40px;
     }
@@ -791,7 +803,10 @@ footer .copyright {
         display: none;
     }
 
-    .about-section, .skills-section, .projects-section, .contact-section {
+    .about-section,
+    .skills-section,
+    .projects-section,
+    .contact-section {
         padding: 70px 20px 60px;
     }
 
