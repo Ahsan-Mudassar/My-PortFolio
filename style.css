@@ -306,6 +306,7 @@ nav ul li a:hover {
     left: -8%;
     color: var(--accent);
     animation-delay: 0s;
+    z-index: 1;
 }
 
 .photo-section .tag-chip.chip-2 {
@@ -313,6 +314,7 @@ nav ul li a:hover {
     right: -10%;
     color: var(--accent-2);
     animation-delay: 1.2s;
+    z-index: 1;
 }
 
 @keyframes bob {
