@@ -55,6 +55,22 @@ a {
     outline-offset: 3px;
 }
 
+.cursor-glow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #1e293b;
+    outline: 2px solid #2c3950;
+    outline-offset: 4px;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s, height 0.2s, background 0.2s;
+    z-index: 9999;
+}
+
 .mono {
     font-family: "JetBrains Mono", monospace;
 }

@@ -31,7 +31,7 @@
             </button>
         </nav>
     </header>
-
+    <div class="cursor-glow" id="cursorGlow"></div>
     <section id="home" class="home-section">
         <div class="hero-section">
             <div class="intro-section">
@@ -54,8 +54,7 @@
                         <span></span><span></span><span></span>
                         <span class="filename">developer.jsx</span>
                     </div>
-                    <img src="images/home-page-code-preview.png"
-                        alt="code preview">
+                    <img src="images/home-page-code-preview.png" alt="code preview">
                 </div>
             </div>
         </div>
@@ -144,7 +143,8 @@
                             alt="Marginilia screenshot"></a>
                 </div>
                 <h3>Marginilia</h3>
-                <p class="project-para">A modern MERN stack application featuring secure authentication, RESTful APIs, and seamless content management.</p>
+                <p class="project-para">A modern MERN stack application featuring secure authentication, RESTful APIs,
+                    and seamless content management.</p>
                 <div class="project-tags">
                     <span>React</span>
                     <span>Node.js</span>
@@ -294,6 +294,7 @@
         const menubtn = document.querySelector(".menu-btn");
         const ul = document.getElementById("list-items");
         const lisItems = document.querySelectorAll("#list-items li");
+        const glow = document.getElementById('cursorGlow');
 
         menubtn.addEventListener('click', () => {
             ul.classList.toggle("active");
@@ -303,6 +304,11 @@
             li.addEventListener('click', () => {
                 ul.classList.remove("active");
             });
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            glow.style.left = e.clientX + 'px';
+            glow.style.top = e.clientY + 'px';
         });
     </script>
 </body>
