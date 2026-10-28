@@ -756,6 +756,10 @@ footer .copyright {
         padding: 0;
     }
 
+    .cursor-glow {
+        display: none;
+    }
+
     nav .menu-btn {
         display: grid;
         place-items: center;
